@@ -18,55 +18,62 @@ function RegisterPage() {
       </header>
 
       <form className="register-form" onSubmit={handleSubmit}>
+        <h1 className="register-form__header">Sign Up</h1>
         <div className="register-form__field">
-          <label htmlFor="firstName">First Name</label>
+          <label htmlFor="firstName" className="register-form__label">First Name</label>
           <input
             type="text"
             id="firstName"
             onChange={(event) => setFormInputs({ ...formInputs, first_name: event.target.value })}
+            className = "register-form__input"
           />
         </div>
         <div className="register-form__field">
-          <label htmlFor="lastName">Last Name</label>
+          <label htmlFor="lastName" className="register-form__label">Last Name</label>
           <input
             type="text"
             id="lastName"
             onChange={(event) => setFormInputs({ ...formInputs, last_name: event.target.value })}
+            className = "register-form__input"
           />
         </div>
         <div className="register-form__field">
-          <label htmlFor="username">Username</label>
+          <label htmlFor="username" className="register-form__label">Username</label>
           <input
             type="text"
             id="username"
             onChange={(event) => setFormInputs({ ...formInputs, username: event.target.value })}
+            className = "register-form__input"
           />
         </div>
         <div className="register-form__field">
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email" className="register-form__label">Email</label>
           <input
             type="email"
             id="email"
             onChange={(event) => setFormInputs({ ...formInputs, email: event.target.value })}
+            className = "register-form__input"
           />
         </div>
         <div className="register-form__field">
-          <label htmlFor="password">Password</label>
+          <label htmlFor="password" className="register-form__label">Password</label>
           <input
             type="password"
             id="password"
             onChange={(event) => setFormInputs({ ...formInputs, password: event.target.value })}
+            className = "register-form__input"
           />
         </div>
         <div className="register-form__field">
-          <label htmlFor="confirmPassword">Confirm Password</label>
+          <label htmlFor="confirmPassword" className="register-form__label">Confirm Password</label>
           <input
             type="password"
             id="confirmPassword"
             onChange={(event) => setFormInputs({ ...formInputs, confirm_password: event.target.value })}
+            className = "register-form__input"
           />
         </div>
-        <button type="submit">Register</button>
+        <button type="submit" className = "register-form__button">REGISTER</button>
       </form>
     </div>
   );
