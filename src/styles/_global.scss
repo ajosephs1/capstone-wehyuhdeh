@@ -1,3 +1,6 @@
+@use "./colours" as *;
+
+
 *,
 *::before,
 *::after {
@@ -7,7 +10,7 @@
 
 body {
   font-family: Helvetica, sans-serif;
-  color: black;
+  color: $primary-text;
 }
 
 //   mixins
@@ -28,7 +31,7 @@ body {
   }
 
   &:focus {
-    color: #000000;
+    color: $primary-text;
     opacity: 100;
     border-style: none;
     border: 2px solid  rgb(51, 51, 51);

@@ -41,7 +41,7 @@ function LoginPage() {
           />
         </div>
         
-        <button type="submit" className = "login-form__button">login</button>
+        <button type="submit" className = "login-form__button">LOG IN</button>
       </form>
     </div>
   );
