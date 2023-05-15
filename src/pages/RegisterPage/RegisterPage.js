@@ -1,13 +1,40 @@
 import React, { useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { BASE_URL } from "../../utils";
 import Logo from "../assets/icons/wehyuhdeh-logo-teal.svg"
 import "./RegisterPage.scss";
 
 function RegisterPage() {
+
+  const [formSubmit, setFormSubmit] = useState(false)
   const [formInputs, setFormInputs] = useState("");
+  const { first_name, last_name, username, email, password, confirm_password } = formInputs
+
+  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(formInputs)
+
+    const newProfile = { first_name, last_name, username, email, password, confirm_password }
+
+    // adds logic/validation to confirm all fields filled
+    if (!first_name || !last_name || !username || !email || !password || !confirm_password) {
+      setFormSubmit(true)
+      return;
+    }
+
+    // axios request to POST/Create new Warehouse to backend database
+    axios
+      .post(`${BASE_URL}/api/profile`, newProfile)
+      .then(() => {
+        alert(`User: ${username} has been added`);
+        navigate("/login");
+      })
+      .catch(({ response }) => {
+        alert(`${response.data}`);
+      });
+      console.log(formInputs)
   };
 
   return (
@@ -25,7 +52,7 @@ function RegisterPage() {
             type="text"
             id="firstName"
             onChange={(event) => setFormInputs({ ...formInputs, first_name: event.target.value })}
-            className = "register-form__input"
+            className="register-form__input"
           />
         </div>
         <div className="register-form__field">
@@ -34,7 +61,7 @@ function RegisterPage() {
             type="text"
             id="lastName"
             onChange={(event) => setFormInputs({ ...formInputs, last_name: event.target.value })}
-            className = "register-form__input"
+            className="register-form__input"
           />
         </div>
         <div className="register-form__field">
@@ -43,7 +70,7 @@ function RegisterPage() {
             type="text"
             id="username"
             onChange={(event) => setFormInputs({ ...formInputs, username: event.target.value })}
-            className = "register-form__input"
+            className="register-form__input"
           />
         </div>
         <div className="register-form__field">
@@ -52,7 +79,7 @@ function RegisterPage() {
             type="email"
             id="email"
             onChange={(event) => setFormInputs({ ...formInputs, email: event.target.value })}
-            className = "register-form__input"
+            className="register-form__input"
           />
         </div>
         <div className="register-form__field">
@@ -61,7 +88,7 @@ function RegisterPage() {
             type="password"
             id="password"
             onChange={(event) => setFormInputs({ ...formInputs, password: event.target.value })}
-            className = "register-form__input"
+            className="register-form__input"
           />
         </div>
         <div className="register-form__field">
@@ -70,10 +97,10 @@ function RegisterPage() {
             type="password"
             id="confirmPassword"
             onChange={(event) => setFormInputs({ ...formInputs, confirm_password: event.target.value })}
-            className = "register-form__input"
+            className="register-form__input"
           />
         </div>
-        <button type="submit" className = "register-form__button">REGISTER</button>
+        <button type="submit" className="register-form__button">REGISTER</button>
       </form>
     </div>
   );
