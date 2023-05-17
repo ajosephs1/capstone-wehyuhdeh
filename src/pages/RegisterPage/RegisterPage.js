@@ -32,7 +32,7 @@ function RegisterPage() {
         navigate("/login");
       })
       .catch(({ response }) => {
-        alert(`${response.data}`);
+        alert(response);
       });
       console.log(formInputs)
   };
