@@ -18,7 +18,7 @@ You may also see any lint errors in the console.
 
 Installs all necessary node modules
 
-### `utils`
+### `utils.js`
 
 Ensure that utils contains:
 
@@ -31,7 +31,20 @@ export const BASE_URL = "http://localhost:8080";
 If navigate links do not work result to routes :
 
 ```
-path='/register' element={<RegisterPage />} 
-path='/login' element={<LoginPage />}
-path='/*' element={<HomePage />} 
+http://localhost:3000/register/
+http://localhost:3000/login/
+http://localhost:3000/
 ```
+### `Tech stacks `
+- Google Places API: https://developers.google.com/maps/documentation/places/web-service
+- `React`
+- `React Router`
+- `SASS`
+- `axios`
+
+### Lessons Learned 
+- Structuring out projects a head of time may be tedious but pays off in the end
+
+### Next Step
+- Implement authorization to allow for event planners to post events
+- Deploy website for all users
