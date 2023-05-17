@@ -1,0 +1,64 @@
+@use "../../styles/global" as *;
+@use "../../styles/colours" as *;
+
+
+.register{
+  background-image: url('../assets/images/liquid-cheese.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 5rem;
+}
+
+.register-header{
+  background-color:$teal ;
+  width: 100%;
+
+  &__logo{
+    height: 6rem;
+    display: block;
+    width: 14rem;
+    margin: auto;
+  }
+}
+
+.register-form{
+  background-color: $key-lime;
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  margin: 5rem auto;
+  // display: block;
+  border-radius: 0.75rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 3px, rgb(51, 51, 51) 0px 0px 0px 3px;
+
+  &__header{
+    font-size: 1.75rem;
+    text-align: center;
+    border-bottom: 3px solid rgba(51, 51, 51);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+  }
+  &__field{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+  }
+
+  &__label{
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
+
+  &__input{
+    @include input
+  }
+
+  &__button{
+    @include button;
+    color: white;
+    background-color: $infra-red;
+    font-weight: 600;
+    font-size: 1.0rem;
+  }
+}
