@@ -2,12 +2,14 @@
 @use "../../styles/colours" as *;
 
 
-body{
+
+
+.login{
   background-image: url('../assets/images/liquid-cheese.svg');
   background-repeat: no-repeat;
   background-size: cover;
+  padding-bottom: 5rem;
 }
-
 
 .login-header{
   background-color: $teal ;
