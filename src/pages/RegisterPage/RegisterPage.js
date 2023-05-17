@@ -16,14 +16,14 @@ function RegisterPage() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    const newProfile = { first_name, last_name, username, email, password, confirm_password }
-
+    
     // adds logic/validation to confirm all fields filled
     if (!first_name || !last_name || !username || !email || !password || !confirm_password) {
       setFormSubmit(true)
-      return;
     }
-
+    
+    const newProfile = { first_name, last_name, username, email, password }
+  
     // axios request to POST/Create new Warehouse to backend database
     axios
       .post(`${BASE_URL}/api/profile`, newProfile)
@@ -34,7 +34,7 @@ function RegisterPage() {
       .catch(({ response }) => {
         alert(response);
       });
-      console.log(formInputs)
+    console.log(formInputs)
   };
 
   return (

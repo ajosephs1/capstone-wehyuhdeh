@@ -7,7 +7,6 @@ import "./PlacesList.scss"
 function PlacesList({ location }) {
 
     const [places, setPlaces] = useState(null)
-    const [placePhoto, setPlacePhoto] = useState(null)
 
 
     useEffect(() => {
