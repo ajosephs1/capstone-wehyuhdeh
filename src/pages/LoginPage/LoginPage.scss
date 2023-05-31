@@ -6,6 +6,7 @@
 
 .login{
   background-image: url('../assets/images/liquid-cheese.svg');
+  min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 5rem;
@@ -61,5 +62,14 @@
     background-color: $infra-red;
     font-weight: 600;
     font-size: 1.0rem;
+  }
+
+  &__signup{
+    margin-top: 0.5rem;
+    font-weight: 600;
+
+    &--link{
+      color: inherit;
+    }
   }
 }
