@@ -56,8 +56,8 @@ function LoginPage() {
         </div>
 
         <button type="submit" className="login-form__button">LOG IN</button>
-        <p>
-          Need an account? <Link to="/register">Sign up</Link>
+        <p className="login-form__signup">
+          Need an account? <Link to="/register" className='login-form__signup--link'>Sign up</Link>
         </p>
       </form>
     </div>

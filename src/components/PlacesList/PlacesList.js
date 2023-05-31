@@ -32,6 +32,7 @@ function PlacesList({ location }) {
                 photoRef = {photoRef}
                 rating = {place.rating}
                 address = {place.vicinity}
+                url ={place.url}
                 />
             )})}
         </div>
