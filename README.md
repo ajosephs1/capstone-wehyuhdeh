@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+In order for web application to be functional clone the [Weh Yuh Deh API](https://github.com/ajosephs1/capstone-wehyuhdeh-api) and run node --watch index.js in your CLI.
+
 ## Available Scripts
 
 In the project directory, you can run:
