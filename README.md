@@ -4,6 +4,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In order for web application to be functional clone the [Weh Yuh Deh API](https://github.com/ajosephs1/capstone-wehyuhdeh-api) and run node --watch index.js in your CLI.
 
+##[Demo Video](https://www.loom.com/share/6ac89934c02f4c02a2e47f29c3e4de27?sid=e0bd3d68-8fc2-4e37-9119-a14ef52c0667)
+
 ## Available Scripts
 
 In the project directory, you can run:
